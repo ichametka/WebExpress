@@ -1,0 +1,3 @@
+C:\Users\idc0322\Documents\GitHub\WebExpress\WebExpress\WebExpress\obj\Debug\WebExpress.njsprojAssemblyReference.cache
+C:\Users\idc0322\Documents\GitHub\WebExpress\WebExpress\WebExpress\obj\Debug\WebExpress.njsproj.CoreCompileInputs.cache
+C:\Users\idc0322\Documents\GitHub\WebExpress\WebExpress\WebExpress\bin\Microsoft.NodejsTools.WebRole.dll

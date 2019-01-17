@@ -34,10 +34,17 @@
   <ItemGroup>
     <Compile Include="app.js" />
     <Compile Include="routes\index.js" />
-    <Compile Include="routes\users.js" />
+    <Compile Include="routes\scheduleType.js" />
+    <Compile Include="routes\subject.js" />
+    <Compile Include="routes\about.js" />
     <Content Include="package.json" />
+    <Content Include="public\ayj.jpg" />
+    <Content Include="public\images\ayj.jpg" />
     <Content Include="public\stylesheets\main.css" />
     <Content Include="README.md" />
+    <Content Include="views\about.pug" />
+    <Content Include="views\subject.pug" />
+    <Content Include="views\scheduleType.pug" />
     <Content Include="views\index.pug" />
     <Content Include="views\layout.pug" />
     <Content Include="views\error.pug" />
