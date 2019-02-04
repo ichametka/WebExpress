@@ -1,20 +1,41 @@
 ﻿doctype html
-html
+html(lang='en')
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/main.css')
-  
-    body
-    img(src='images/ayj.jpg')
-    ul
-        li  
-            a(href='index') Home
-        li
-            a(href='subject') Subjects
-        li
-            a(href='scheduleType') Schedule Types
-        li
-            a(href='about') About
-    p 
+    title Bootstrap Example
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+   
+    // Bootstrap core CSS
+    link(href='vendor/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+    // Custom styles for this template
+    link(href='css/scrolling-nav.css', rel='stylesheet')
+    script(src='vendor/jquery/jquery.min.js')
+    script(src='vendor/bootstrap/js/bootstrap.bundle.min.js')
+    // Plugin JavaScript
+    script(src='vendor/jquery-easing/jquery.easing.min.js')
+    // Custom JavaScript for this theme
+    script(src='js/scrolling-nav.js')
+  body
+    p#page-top
+        nav#mainNav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+            .container
+                img.img-thumbnail(src='images/ayj.jpg', alt='Cinque Terre', height='100', width='100')
+                a.navbar-brand.js-scroll-trigger(href='index') &nbsp;&nbsp;&nbsp;Schedule Creator
+                button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarResponsive.collapse.navbar-collapse
+                    ul.navbar-nav.ml-auto
+                            li.nav-item
+                                a.nav-link.js-scroll-trigger(href='index') Home
+                            li.nav-item
+                                a.nav-link.js-scroll-trigger(href='subject') Subjects
+                            li.nav-item
+                                a.nav-link.js-scroll-trigger(href='scheduleType') Schedule Types
+                            li.nav-item
+                                a.nav-link.js-scroll-trigger(href='about') About
     block content   
-    p Copyright (c) Paulinka Chametka
+    footer.py-5.bg-dark
+        .container
+            p.m-0.text-center.text-white Copyright © Paulinka Chametka 2019

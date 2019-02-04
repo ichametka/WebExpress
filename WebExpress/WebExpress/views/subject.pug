@@ -1,4 +1,26 @@
 ﻿extends layout
 
 block content
-  p Welcome to #{title}
+ header.bg-primary.text-white
+        .container.text-center
+            h1 Welcome to Subject page
+            p.lead=title
+            p=subjects
+ section.container.text-left
+            a.float-right(href='/add', title='Add a subject') Add a Subject
+            table.table.table-striped
+                        tr.table-primary
+                            td Description
+                            td Capacity
+                            td Column Index
+                            td Actions
+                        for item in list
+                            tr
+                                td=item.description
+                                td=item.capacity
+                                td=item.columnIndex
+                                td
+                                    - var edit = '/edit/' + item.id
+                                    - var del = '/delete/' + item.id
+                                    a.btn.btn-sm.btn-success(href=edit, target='_blank', rel='noopener') Edit
+                                    a.btn.btn-sm.btn-danger(href=del) Delete

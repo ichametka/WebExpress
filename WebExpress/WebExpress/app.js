@@ -6,7 +6,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var sqlite3 = require('sqlite3')
 
+var dba = require('./dba/dba');
 var routes = require('./routes/index');
 var about = require('./routes/about');
 var scheduleType = require('./routes/scheduleType');
@@ -26,11 +28,23 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// create connection to database
+// the mysql.createConnection function takes in a configuration object which contains host, user, password and the database name.
+var db = new sqlite3.Database('./database.sqlite3', sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE, (err) => {
+	if (err) {
+		console.log('Could not connect to database', err)
+	} else {
+		console.log('Connected to database')
+	}
+})
+global.db = db;
+
 app.use('/', routes);
 app.use('/index', routes);
 app.use('/about', about);
 app.use('/scheduleType', scheduleType);
 app.use('/subject', subject);
+app.use('/add', subject);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
