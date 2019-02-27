@@ -10,9 +10,9 @@ var sqlite3 = require('sqlite3')
 
 var dba = require('./dba/dba');
 var routes = require('./routes/index');
-var about = require('./routes/about');
-var scheduleType = require('./routes/scheduleType');
-var subject = require('./routes/subject');
+//var about = require('./routes/about');
+//var scheduleType = require('./routes/scheduleType');
+//var subject = require('./routes/subject');
 
 var app = express();
 
@@ -40,11 +40,11 @@ var db = new sqlite3.Database('./database.sqlite3', sqlite3.OPEN_READWRITE | sql
 global.db = db;
 
 app.use('/', routes);
-app.use('/index', routes);
-app.use('/about', about);
-app.use('/scheduleType', scheduleType);
-app.use('/subject', subject);
-app.use('/add', subject);
+//app.use('/index', routes);
+//app.use('/about', about);
+//app.use('/scheduleType', scheduleType);
+//app.use('/subject', subject);
+//app.use('/subject/add', subject);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

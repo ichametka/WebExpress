@@ -20,7 +20,7 @@ router.get('/', function (req, res) {
 });
 
 router.get('/add', function (req, res) {
-	res.render('subject-edit', { title: 'Edit'});
+	res.render('subjectedit', { title: 'Edit'});
 });
 
 module.exports = router;

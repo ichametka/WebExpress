@@ -1,0 +1,20 @@
+﻿extends layout
+
+block content
+ header.bg-primary.text-white
+   .container.text-center
+     h3 Welcome to Subject EDIT page
+ section.container.text-left
+     form(method='POST' action='')
+       .form-group
+         label(for='Description') 
+         input#Description.form-control(type='text', name='description', aria-describedby='emailHelp', placeholder='Enter description')
+         small#emailHelp.form-text.text-muted Type a subject description.
+       .form-group
+         label(for='Capacity') Capacity
+         input#exampleInputPassword1.form-control(type='text', name='capacity', placeholder='Enter capacity')
+       .form-group
+         label(for='ColumnIndex') Column Index
+         input#exampleInputPassword1.form-control(type='text', name='columnIndex', placeholder='Enter column index')
+       button.btn.btn-primary(type='submit') Submit   
+       button.btn.btn-primary(type='submit') Cancel

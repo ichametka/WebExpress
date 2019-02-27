@@ -4,6 +4,29 @@ block content
     header.bg-primary.text-white
         .container.text-center
             h1 Welcome to Index File
-            p.lead This is main page of the site 
+            .form-group
+                label(for='Description') 
+                input#Description.form-control(type='text', name='description', aria-describedby='emailHelp', placeholder='Enter description')
+                small#emailHelp.form-text.text-muted Type a subject description.
+            p.lead This is main page of the site
+            -var myFunction = function(argumentOne, argumentTwo) {
+            -    return argumentTwo + " Sample text and more can be dynamic change" + argumentOne
+            -    };
+            p= myFunction(32, 'hello')
+            script.
+              var something = function() {
 
+                //alert ('alert')
+                var desc= $("#Description").val();
+                var data = {type:desc, model:"500", color:"white"};
+               
+                      // construct an HTTP request
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", "subjecttestpost", true);
+                    xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
 
+                      // send the collected data as JSON
+                    xhr.send(JSON.stringify(data));
+               }
+
+            button.btn.btn-warning(type='button',onclick='something()') Click
